@@ -2,13 +2,12 @@
 
 namespace app\controllers\portal;
 
-class HomeController {
+class CursoController {
     public function index(){
         dd('index');
     }
 
     public function create() {
-
     }
 
     public function store() {
@@ -16,7 +15,7 @@ class HomeController {
     }
 
     public function show() {
-
+        dd('show');
     }
 
     public function edit($id) {

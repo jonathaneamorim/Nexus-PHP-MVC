@@ -4,6 +4,7 @@ require "../bootstrap.php";
 
 use core\Controller;
 use app\classes\Uri;
+use core\Method;
 
 // https://devclass.com.br/curso/show/12
 
@@ -13,6 +14,13 @@ try {
     // Capturar primeiro slug (curso)
     $controller = new Controller;
     $controller = $controller->load();
+
+    $method = new Method;
+    $method =  $method->load($controller);
+
+    $controller->$method();
+
+
     dd($controller);
 }catch(Exception $e) {
     dd($e->getMessage());
