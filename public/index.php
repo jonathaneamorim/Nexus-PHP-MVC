@@ -3,8 +3,8 @@
 require "../bootstrap.php";
 
 use core\Controller;
-use app\classes\Uri;
 use core\Method;
+use core\Parameters;
 
 // https://devclass.com.br/curso/show/12
 
@@ -18,10 +18,12 @@ try {
     $method = new Method;
     $method =  $method->load($controller);
 
-    $controller->$method();
+    $parameters = new Parameters;
+    $parameters = $parameters->load($controller);
 
+    $controller->$method($parameters);
 
-    dd($controller);
+    // dd($controller);
 }catch(Exception $e) {
     dd($e->getMessage());
 }

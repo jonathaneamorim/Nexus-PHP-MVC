@@ -2,7 +2,9 @@
 
 namespace app\controllers\portal;
 
-class ProdutoController {
+use app\controllers\ContainerController;
+
+class ProdutoController extends ContainerController{
     public function index() {
 
     }
@@ -16,7 +18,10 @@ class ProdutoController {
     }
 
     public function show() {
-
+        // dentro do método view, pegar na pasta portal o arquivo cursos.html
+        $this->view([
+            'title' => 'Produto',
+        ],'portal.produto');
     }
 
     public function edit($id) {
