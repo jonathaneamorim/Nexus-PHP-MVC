@@ -22,8 +22,6 @@ try {
     $parameters = $parameters->load($controller);
 
     $controller->$method($parameters);
-
-    // dd($controller);
 }catch(Exception $e) {
     dd($e->getMessage());
 }

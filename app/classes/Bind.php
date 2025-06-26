@@ -11,11 +11,10 @@ class Bind {
         }
     }
 
-    public function get($name) {
-        if(!isset(static::$bind[$name])) {
-            throw new \Exception("Esse índice não existe dentro do bind: {$name}");
+    public static function get($name) {
+        if (!isset(static::$bind[$name])) {
+            throw new \Exception("Esse índice não existe no bind: {$name}");
         }
-
         // A flag (object) basicamente está transformando o formato de retorno em object, o que faz com que os parâmetros devolvidos 
         // sejam acessados utilizando o padrão $item->subitem
         return (object) static::$bind[$name];
