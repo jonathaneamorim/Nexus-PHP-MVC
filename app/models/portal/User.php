@@ -2,8 +2,10 @@
 
 namespace app\models\portal;
 
-class User extends Model {
-    protected $table = 'user';
+use app\models\Model;
 
+class User extends Model {
+    
+    protected $table = 'user';
     
 }

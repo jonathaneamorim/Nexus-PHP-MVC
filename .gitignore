@@ -15,6 +15,9 @@ Desktop.ini # Windows
 # Ignorar o diretório vendor (gerenciado pelo Composer)
 /vendor/
 
+# ignora as pastas do intelij
+/.idea/
+
 # Ignorar arquivos de configuração de ambiente (senhas, chaves de API, etc.)
 # Esses arquivos não podem ser versionados
 # Caso necessário, criar um arquivo .env.example para que outros desenvolvedores saibam o que configurar.
